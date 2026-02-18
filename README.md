@@ -1,45 +1,58 @@
-project is a graphical application developed using C++, OpenGL, and the GLUT library. It demonstrates basic rendering techniques, specifically drawing geometric primitives.
+> Project is a collection of graphical applications developed using C++, OpenGL, and the GLUT library. It demonstrates basic rendering techniques, specifically drawing geometric primitives.
 
 ## Prerequisites
 
 Before building this project, ensure the following tools are installed and configured in your system environment path:
 
-- C++ Compiler (MinGW recommended for Windows)
-- CMake (Version 3.10 or higher)
-- OpenGL libraries
-- GLUT/FreeGLUT libraries
+- **C++ Compiler**: MinGW-w64 (recommended for Windows) or GCC/Clang.
+- **CMake**: Version 3.10 or higher.
+- **OpenGL Libraries**: Should be included with your compiler or OS.
+- **GLUT/FreeGLUT**: Ensure libraries and headers are available.
 
-## Setup
+## Setup & Build
 
-To initialize the project build system, execute the provided setup script. This script creates the necessary build directory and generates the MinGW makefiles.
+Use the provided `build.sh` script to manage the project. (Note: On Windows, use a bash-compatible terminal like Git Bash).
 
-1. Open a terminal or command prompt in the project root directory.
-2. Run the setup script:
-   ```cmd
-   build.bat setup
-   ```
-
-## Building the Project
-
-After setting up the project, you can compile the source code using the build script.
-
-Run the following command:
-```cmd
-build.bat
+### 1. Initialization (Setup)
+Run the following command once to generate the build files:
+```bash
+./build.sh setup
 ```
 
-This will invoke `mingw32-make` within the build directory and generate the executables.
+### 2. Compiling the Source
+To build all targets, run:
+```bash
+./build.sh
+```
 
 ## Running the Application
 
-Upon successful compilation, the executables will be located in the `build` directory. You can run them via the command line:
+Upon successful compilation, executables are placed in the `bin/` directory.
 
-```cmd
-cd build
-main.exe
+### Available Targets
+- `main`: Main entry point.
+- `codeblok`: Geometric primitives demonstration.
+- `tugas2`: Coursework assignment (Pertemuan 2).
+
+### Running a specific target
+You can run a target directly from the `build.sh` script by passing the target name:
+```bash
+./build.sh main
+./build.sh codeblok
+./build.sh tugas2
+```
+Alternatively, run them directly from the `bin/` folder:
+```bash
+./bin/main
+./bin/codeblok
+./bin/tugas2
 ```
 
 ## Project Structure
 
-- `CMakeLists.txt`: CMake configuration file defining build targets and dependencies.
-- `build.bat`: Script to compile the project.
+- `main.cpp`: Main source file.
+- `codeblok.cpp`: Additional source file for geometric primitives.
+- `coursework/`: Contains coursework assignments (e.g., `pertemuan2.cpp`).
+- `bin/`: Contains pre-built DLLs (like `libfreeglut.dll`) and compiled executables.
+- `build.sh`: Bash script to setup, compile, and run the applications.
+- `CMakeLists.txt`: CMake configuration for the project.
