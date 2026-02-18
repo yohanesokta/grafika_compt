@@ -8,7 +8,7 @@
 
 void display(){
 	glClear(GL_COLOR_BUFFER_BIT);
-	glPointSize(4);
+	glPointSize(10);
 
 	glBegin(GL_POINTS);
 	glVertex2f(-1.0,-1.0);
@@ -47,6 +47,5 @@ int main(int argc, char* argv[]){
 	glutDisplayFunc(display);
 	myinit();
 	glutMainLoop();
-
 	return 0;
 }
