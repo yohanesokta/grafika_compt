@@ -9,7 +9,8 @@ set(GL_LIBS
 
 add_executable(main main.cpp)
 add_executable(codeblok codeblok.cpp)
+add_executable(tugas2 coursework/pertemuan2.cpp)
 
-foreach(target main codeblok)
+foreach(target main codeblok tugas2)
     target_link_libraries(${target} PRIVATE ${GL_LIBS})
 endforeach()
