@@ -1,4 +1,9 @@
+#ifdef _WIN32
 #include <windows.h>
+#else
+#include <unistd.h>
+#endif
+
 
 #ifdef __APPLE__
 #include <GLUT/glut.h>

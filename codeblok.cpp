@@ -10,8 +10,14 @@
  * displayed until the ESC or q key is pressed.  The
  * number of geometry stacks and slices can be adjusted
  * using the + and - keys.
+
  */
+#ifdef _WIN32
 #include <windows.h>
+#else
+#include <unistd.h>
+#endif
+
 #ifdef __APPLE__
 #include <GLUT/glut.h>
 #else

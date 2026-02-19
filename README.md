@@ -1,6 +1,9 @@
+#### OpenGL-GLUT Project on Camps
 > Project is a collection of graphical applications developed using C++, OpenGL, and the GLUT library. It demonstrates basic rendering techniques, specifically drawing geometric primitives.
 
 ## Prerequisites
+
+> Ini bahkan jauh lebih stabil karena menggunakan FreeGlut yang package nya masih di ter maintenance dengan baik
 
 Before building this project, ensure the following tools are installed and configured in your system environment path:
 
